@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{8663C054-4207-488D-99E5-24874E98A708}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+    <RootNamespace>NetDesigner</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Kernel32.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AuxFunctions.h" />
+    <ClInclude Include="CActivation.h" />
+    <ClInclude Include="CArchiveWeights.h" />
+    <ClInclude Include="CAssemblyPicker.h" />
+    <ClInclude Include="CAutoEncoderConfigDlg.h" />
+    <ClInclude Include="CAutomationDlg.h" />
+    <ClInclude Include="CAutoNetConfigDlg.h" />
+    <ClInclude Include="CAutoRnnConfigDlg.h" />
+    <ClInclude Include="CClusterAnalysisDlg.h" />
+    <ClInclude Include="CDataOperations.h" />
+    <ClInclude Include="CFileOperations.h" />
+    <ClInclude Include="CDataOutputOptionsDlg.h" />
+    <ClInclude Include="CDataSetDlg.h" />
+    <ClInclude Include="CDateTime.h" />
+    <ClInclude Include="CDerivative.h" />
+    <ClInclude Include="CEvaluateDlg.h" />
+    <ClInclude Include="CEvaluateFileDlg.h" />
+    <ClInclude Include="CExportFileTypeDlg.h" />
+    <ClInclude Include="CFFT.h" />
+    <ClInclude Include="CFieldKeyDlg.h" />
+    <ClInclude Include="CFileNameParser.h" />
+    <ClInclude Include="CFileTypeSelectDlg.h" />
+    <ClInclude Include="CGraphOptions.h" />
+    <ClInclude Include="CGuideSettings.h" />
+    <ClInclude Include="CInputOptimization.h" />
+    <ClInclude Include="CJSON.h" />
+    <ClInclude Include="CLayerDataDlg.h" />
+    <ClInclude Include="ClusterGraphWnd.h" />
+    <ClInclude Include="CMFCVisualManagerCustom.h" />
+    <ClInclude Include="CNetData.h" />
+    <ClInclude Include="CNetInfo.h" />
+    <ClInclude Include="CNormalize.h" />
+    <ClInclude Include="COptions.h" />
+    <ClInclude Include="CopyrightOptions.h" />
+    <ClInclude Include="CPreProcessor.h" />
+    <ClInclude Include="CSeedDlg.h" />
+    <ClInclude Include="CStatus.h" />
+    <ClInclude Include="CStatus2.h" />
+    <ClInclude Include="CTrainInitializationDlg1.h" />
+    <ClInclude Include="CTrainInitializationDlg2.h" />
+    <ClInclude Include="CTrainInitializationDlg3.h" />
+    <ClInclude Include="DataView.h" />
+    <ClInclude Include="DefaultOptionsDlg.h" />
+    <ClInclude Include="Graph.h" />
+    <ClInclude Include="GraphWnd.h" />
+    <ClInclude Include="NetOutputDlg.h" />
+    <ClInclude Include="NetVerify.h" />
+    <ClInclude Include="Neuron.h" />
+    <ClInclude Include="NodeView.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="NetDesigner.h" />
+    <ClInclude Include="NetDesignerDoc.h" />
+    <ClInclude Include="NetDesignerView.h" />
+    <ClInclude Include="NormalizationFactor.h" />
+    <ClInclude Include="OutputWnd.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="PropertiesWnd.h" />
+    <ClInclude Include="Structures.h" />
+    <ClInclude Include="ToolboxWnd.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ViewTree.h" />
+    <ClInclude Include="WaveFile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AuxFunctions.cpp" />
+    <ClCompile Include="CActivation.cpp" />
+    <ClCompile Include="CArchiveWeights.cpp" />
+    <ClCompile Include="CAssemblyPicker.cpp" />
+    <ClCompile Include="CAutoEncoderConfigDlg.cpp" />
+    <ClCompile Include="CAutomationDlg.cpp" />
+    <ClCompile Include="CAutoNetConfigDlg.cpp" />
+    <ClCompile Include="CAutoRnnConfigDlg.cpp" />
+    <ClCompile Include="CClusterAnalysisDlg.cpp" />
+    <ClCompile Include="CDataOperations.cpp" />
+    <ClCompile Include="CFileOperations.cpp" />
+    <ClCompile Include="CDataOutputOptionsDlg.cpp" />
+    <ClCompile Include="CDataSetDlg.cpp" />
+    <ClCompile Include="CDateTime.cpp" />
+    <ClCompile Include="CDerivative.cpp" />
+    <ClCompile Include="CEvaluateDlg.cpp" />
+    <ClCompile Include="CEvaluateFileDlg.cpp" />
+    <ClCompile Include="CExportFileTypeDlg.cpp" />
+    <ClCompile Include="CFFT.cpp" />
+    <ClCompile Include="CFieldKeyDlg.cpp" />
+    <ClCompile Include="CFileNameParser.cpp" />
+    <ClCompile Include="CFileTypeSelectDlg.cpp" />
+    <ClCompile Include="CGraphOptions.cpp" />
+    <ClCompile Include="CGuideSettings.cpp" />
+    <ClCompile Include="CInputOptimization.cpp" />
+    <ClCompile Include="CJSON.cpp" />
+    <ClCompile Include="CLayerDataDlg.cpp" />
+    <ClCompile Include="ClusterGraphWnd.cpp" />
+    <ClCompile Include="CMFCVisualManagerCustom.cpp" />
+    <ClCompile Include="CNetData.cpp" />
+    <ClCompile Include="CNetInfo.cpp" />
+    <ClCompile Include="CNormalize.cpp" />
+    <ClCompile Include="COptions.cpp" />
+    <ClCompile Include="CopyrightOptions.cpp" />
+    <ClCompile Include="CPreProcessor.cpp" />
+    <ClCompile Include="CSeedDlg.cpp" />
+    <ClCompile Include="CStatus.cpp" />
+    <ClCompile Include="CStatus2.cpp" />
+    <ClCompile Include="CTrainInitializationDlg1.cpp" />
+    <ClCompile Include="CTrainInitializationDlg2.cpp" />
+    <ClCompile Include="CTrainInitializationDlg3.cpp" />
+    <ClCompile Include="DataView.cpp" />
+    <ClCompile Include="DefaultOptionsDlg.cpp" />
+    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="GraphWnd.cpp" />
+    <ClCompile Include="NetOutputDlg.cpp" />
+    <ClCompile Include="NetVerify.cpp" />
+    <ClCompile Include="Neuron.cpp" />
+    <ClCompile Include="NodeView.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="NetDesigner.cpp" />
+    <ClCompile Include="NetDesignerDoc.cpp" />
+    <ClCompile Include="NetDesignerView.cpp" />
+    <ClCompile Include="NormalizationFactor.cpp" />
+    <ClCompile Include="OutputWnd.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PropertiesWnd.cpp" />
+    <ClCompile Include="ToolboxWnd.cpp" />
+    <ClCompile Include="ViewTree.cpp" />
+    <ClCompile Include="WaveFile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NetDesigner.reg" />
+    <None Include="Neuron.swift" />
+    <None Include="resource.hm" />
+    <None Include="res\crosshai.cur" />
+    <None Include="res\cur00001.cur" />
+    <None Include="res\cursor1.cur" />
+    <None Include="res\cursor2.cur" />
+    <None Include="res\NetDesigner.rc2" />
+    <None Include="res\ribbon.mfcribbon-ms" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NetDesigner.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bitmap2.bmp" />
+    <Image Include="res\bitmap3.bmp" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\buttons.bmp" />
+    <Image Include="res\buttons16.bmp" />
+    <Image Include="res\buttons32.bmp" />
+    <Image Include="res\buttonslarge.bmp" />
+    <Image Include="res\classview.bmp" />
+    <Image Include="res\classview_hc.bmp" />
+    <Image Include="res\classview_hc_16.bmp" />
+    <Image Include="res\class_view.ico" />
+    <Image Include="res\class_view_hc.ico" />
+    <Image Include="res\data128.bmp" />
+    <Image Include="res\data128.png" />
+    <Image Include="res\explorer.bmp" />
+    <Image Include="res\explorer_hc.bmp" />
+    <Image Include="res\file16.bmp" />
+    <Image Include="res\file32.bmp" />
+    <Image Include="res\filelarge.bmp" />
+    <Image Include="res\filesmall.bmp" />
+    <Image Include="res\fileview.bmp" />
+    <Image Include="res\fileview_hc.bmp" />
+    <Image Include="res\file_vie.ico" />
+    <Image Include="res\file_view.ico" />
+    <Image Include="res\file_view_hc.ico" />
+    <Image Include="res\fit16.bmp" />
+    <Image Include="res\fit_to_size.png" />
+    <Image Include="res\folder_open.png" />
+    <Image Include="res\graph.ico" />
+    <Image Include="res\graph_hc.ico" />
+    <Image Include="res\ico00001.ico" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\icon2.ico" />
+    <Image Include="res\main.bmp" />
+    <Image Include="res\main2.bmp" />
+    <Image Include="res\menuimages.bmp" />
+    <Image Include="res\menuimages_hc.bmp" />
+    <Image Include="res\NetDesigner.ico" />
+    <Image Include="res\NetDesignerDoc.ico" />
+    <Image Include="res\output_wnd.ico" />
+    <Image Include="res\output_wnd_hc.ico" />
+    <Image Include="res\properties.bmp" />
+    <Image Include="res\properties_hc.bmp" />
+    <Image Include="res\properties_wnd.ico" />
+    <Image Include="res\properties_wnd_hc.ico" />
+    <Image Include="res\sort.bmp" />
+    <Image Include="res\sort_hc.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\Toolbar256.bmp" />
+    <Image Include="res\toolbox_hc.ico" />
+    <Image Include="res\toolbox_view.ico" />
+    <Image Include="res\toolbox_wnd.ico" />
+    <Image Include="res\toolbox_wnd_hc.ico" />
+    <Image Include="res\write16.bmp" />
+    <Image Include="res\write32.bmp" />
+    <Image Include="res\writelarge.bmp" />
+    <Image Include="res\writesmall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="WorkList.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
