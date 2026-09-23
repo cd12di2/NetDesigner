@@ -18,25 +18,26 @@ NetDesigner is designed for developers, roboticists, and systems engineers who r
 
 The software is structured into three decoupled functional layers:
 
+```text
 ┌─────────────────────────────────────────────────────────────┐
-│ Visual UI Layout Layer │
-│ (MFC CDocument / CView Schematics, Component Canvas) │
+│ Visual UI Layout Layer                                      │
+│ (MFC CDocument / CView Schematics, Component Canvas)        │
 └──────────────────────────────┬──────────────────────────────┘
-│
-▼
+                               │
+                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│ Intermediate Data Representation │
-│ (NetData / netDataStruct: Topology, Edges, Parameters) │
-│ Serialization: Native .nnd / JSON │
+│ Intermediate Data Representation                            │
+│ (NetData / netDataStruct: Topology, Edges, Parameters)      │
+│ Serialization: Native .nnd / JSON                           │
 └──────────────────────────────┬──────────────────────────────┘
-│
-▼
+                               │
+                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│ Graph Resolution and Execution │
-│ (NetBuilder: Depth-First Inlining, Topological Sort) │
-│ (CNetCore: Forward / Reverse Backpropagation Passes) │
+│ Graph Resolution and Execution                              │
+│ (NetBuilder: Depth-First Inlining, Topological Sort)        │
+│ (CNetCore: Forward / Reverse Backpropagation Passes)        │
 └─────────────────────────────────────────────────────────────┘
-
+```
 
 
 ## Core Computational Primitives (`Neuron.h` / `Neuron.cpp`)
